@@ -1,0 +1,23 @@
+table {
+    border: 2px solid;
+    width: 200px;
+    height: 250px;
+    border-radius: 5px;
+    float: left;
+    margin: 3px;
+    background-color: rgb(88, 87, 87);
+}
+
+th {
+    border: 2px solid;
+    border-radius: 5px;
+    background-color: antiquewhite;
+}
+
+tr th:hover {
+    background-color: rgb(237, 185, 117);
+}
+
+tr:hover th {
+    background-color: rgb(237, 185, 117);
+}

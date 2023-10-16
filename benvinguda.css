@@ -1,3 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Pixelify+Sans:wght@500&display=swap');
+*{
+    text-align: center;
+}
+h1{
+    font-family: 'Lilita One', sans-serif;
+    font-size: 60px;
+}
 button{
-    color: red;
+    font-family: 'Lilita One', sans-serif;
+
+    width: 300px;
+    height: 300px;
+    font-size: xx-large;
+    color: rgb(237, 185, 117);
+}
+button:hover{
+        transform:  scale(1);
+        color: aliceblue;
+        background-color: rgb(237, 185, 117);
+		border-radius: 0;
+        transition-duration: 0.2s;        transition-timing-function: linear;
+
 }

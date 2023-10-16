@@ -6,87 +6,87 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const groups = [
         {
-            groupName: "Group1",
+            groupName: "Grup 1",
             students: [
-                { name: "Estudiante1A" },
-                { name: "Estudiante1B" },
-                { name: "Estudiante1C" }
+                { name: "Alejandro" },
+                { name: "Victor" },
+                { name: "Bru" }
             ]
         },
         {
-            groupName: "Group2",
+            groupName: "Grup 2",
             students: [
-                { name: "Estudiante2A" },
-                { name: "Estudiante2B" },
-                { name: "Estudiante2C" }
+                { name: "Maria" },
+                { name: "Laura" },
+                { name: "Helena" }
             ]
         },
         {
-            groupName: "Group3",
+            groupName: "Grup 3",
             students: [
-                { name: "Estudiante3A" },
-                { name: "Estudiante3B" },
-                { name: "Estudiante3C" }
+                { name: "David" },
+                { name: "Aleix" },
+                { name: "Manel" }
             ]
         },
         {
-            groupName: "Group4",
+            groupName: "Grup 4",
             students: [
-                { name: "Estudiante4A" },
-                { name: "Estudiante4B" },
-                { name: "Estudiante4C" }
+                { name: "Eloy" },
+                { name: "Estefania" },
+                { name: "Kiara" }
             ]
         },
         {
-            groupName: "Group5",
+            groupName: "Grup 5",
             students: [
-                { name: "Estudiante5A" },
-                { name: "Estudiante5B" },
-                { name: "Estudiante5C" }
+                { name: "Monica" },
+                { name: "Jose" },
+                { name: "Arnau" }
             ]
         },
         {
-            groupName: "Group6",
+            groupName: "Grup 6",
             students: [
-                { name: "Estudiante6A" },
-                { name: "Estudiante6B" },
-                { name: "Estudiante6C" }
+                { name: "Carmen" },
+                { name: "Toni" },
+                { name: "Oriol" }
             ]
         },
         {
-            groupName: "Group7",
+            groupName: "Grup 7",
             students: [
-                { name: "Estudiante7A" },
-                { name: "Estudiante7B" },
-                { name: "Estudiante7C" }
+                { name: "Javi" },
+                { name: "Romà" },
+                { name: "Siliva" }
             ]
         },
         {
-            groupName: "Group8",
+            groupName: "Grup 8",
             students: [
-                { name: "Estudiante8A" },
-                { name: "Estudiante8B" },
-                { name: "Estudiante8C" }
+                { name: "Unai" },
+                { name: "Alexis" },
+                { name: "Juan" }
             ]
         },
         {
-            groupName: "Group9",
+            groupName: "Grup 9",
             students: [
-                { name: "Estudiante9A" },
-                { name: "Estudiante9B" },
-                { name: "Estudiante9C" }
+                { name: "Sergi" },
+                { name: "Paula" },
+                { name: "Laia" }
             ]
         },
         {
-            groupName: "Group10",
+            groupName: "Grup 10",
             students: [
-                { name: "Estudiante10A" },
-                { name: "Estudiante10B" },
-                { name: "Estudiante10C" }
+                { name: "Nerea" },
+                { name: "Carla" },
+                { name: "Natalia" }
             ]
         },
         {
-            groupName: "Group11",
+            groupName: "Grup 11",
             students: [
                 { name: "Estudiante11A" },
                 { name: "Estudiante11B" },
@@ -94,7 +94,7 @@ document.addEventListener('DOMContentLoaded', function() {
             ]
         },
         {
-            groupName: "Group12",
+            groupName: "Grup 12",
             students: [
                 { name: "Estudiante12A" },
                 { name: "Estudiante12B" },
@@ -104,7 +104,7 @@ document.addEventListener('DOMContentLoaded', function() {
     ];
     
 
-    const displayGroupDetails = (groupName) => {
+    const displayGrupDetails = (groupName) => {
         const group = groups.find(g => g.groupName === groupName);
         studentListEl.innerHTML = ''; // Limpiar el listado previo
         groupNameTitle.textContent = `Información del ${groupName}`;
@@ -126,7 +126,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         if (targetRow && targetRow.hasAttribute('data-group')) {
             const groupName = targetRow.getAttribute('data-group');
-            displayGroupDetails(groupName);
+            displayGrupDetails(groupName);
         }
     };
 

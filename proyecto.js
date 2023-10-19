@@ -3,6 +3,21 @@ document.addEventListener('DOMContentLoaded', function() {
     const mainTableEl = document.getElementById('mainTable');
     const studentListEl = document.getElementById('studentList');
     const groupNameTitle = document.getElementById('groupNameTitle');
+    let GrupsBotons = document.getElementById('GrupsBotons');
+
+    const generarBotones = () => {
+        for(let i=0; i < groups.length; i++){
+            let boton = document.createElement("button");
+            boton.innerText = groups[i].groupName;
+
+            // Establecer el comportamiento al hacer clic en el botón
+            boton.onclick = function() {
+                displayGrupDetails(groups[i].groupName);
+            };
+
+            GrupsBotons.appendChild(boton);
+        }
+    }
 
     const groups = [
         {
@@ -104,6 +119,37 @@ document.addEventListener('DOMContentLoaded', function() {
     ];
     
 
+
+    const clearPreviousHighlight = () => {
+        const secondaryTableRows = secondaryTableEl.getElementsByTagName('tr');
+        const mainTableRows = mainTableEl.getElementsByTagName('tr');
+
+        for (let row of secondaryTableRows) {
+            row.classList.remove('highlighted-row');
+        }
+
+        for (let row of mainTableRows) {
+            row.classList.remove('highlighted-row');
+        }
+    }
+
+    const highlightTableRow = (groupName) => {
+        clearPreviousHighlight();
+
+        const findAndHighlight = (table) => {
+            const rows = table.getElementsByTagName('tr');
+            for (let row of rows) {
+                if (row.getAttribute('data-group') === groupName) {
+                    row.classList.add('highlighted-row');
+                    break;
+                }
+            }
+        }
+
+        findAndHighlight(secondaryTableEl);
+        findAndHighlight(mainTableEl);
+    }
+
     const displayGrupDetails = (groupName) => {
         const group = groups.find(g => g.groupName === groupName);
         studentListEl.innerHTML = ''; // Limpiar el listado previo
@@ -116,6 +162,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 studentListEl.appendChild(li);
             });
         }
+
+        highlightTableRow(groupName);
     };
 
     const handleTableClick = (e) => {
@@ -132,4 +180,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     secondaryTableEl.addEventListener('click', handleTableClick);
     mainTableEl.addEventListener('click', handleTableClick);
+
+    // Finalmente, generamos los botones.
+    generarBotones();
 });

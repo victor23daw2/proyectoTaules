@@ -21,6 +21,14 @@ tr th:hover {
 tr:hover th {
     background-color: rgb(237, 185, 117);
 }
+
+tr:active th{
+    background-color: rgb(237, 185, 117)
+}
+.highlighted-row th {
+    background-color: rgb(237, 185, 117);
+}
+
 #selectedGrupInfo {
     margin-left: 20px; /* Añade un margen a la izquierda para separarlo de las tablas */
     padding: 10px; /* Añade un relleno interno para que el contenido no esté pegado a los bordes */

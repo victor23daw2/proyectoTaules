@@ -8,10 +8,11 @@ table {
     background-color: rgb(88, 87, 87);
 }
 body{
-    background-image: url(fons.png);
-    background-position: center top;
+    background-image: url(fondo-plano-poligonal_23-2148916170.jpg);
+    background-position: center center;
     background-size: 100%;
-    background-repeat: no-repeat;
+    background-repeat: repeat-y;
+
 }
 th {
     border: 2px solid;

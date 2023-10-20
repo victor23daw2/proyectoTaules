@@ -1,14 +1,16 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const secondaryTableEl = document.getElementById('secondaryTable');
-    const mainTableEl = document.getElementById('mainTable');
-    const studentListEl = document.getElementById('studentList');
-    const groupNameTitle = document.getElementById('groupNameTitle');
+    let secondaryTableEl = document.getElementById('secondaryTable');
+    let mainTableEl = document.getElementById('mainTable');
+    let studentListEl = document.getElementById('studentList');
+    let groupNameTitle = document.getElementById('groupNameTitle');
     let GrupsBotons = document.getElementById('GrupsBotons');
 
-    const generarBotones = () => {
+    let generarBotones = () => {
         for(let i=0; i < groups.length; i++){
             let boton = document.createElement("button");
             boton.innerText = groups[i].groupName;
+            boton.className = "miBoton";
+    
 
             // Establecer el comportamiento al hacer clic en el botón
             boton.onclick = function() {
@@ -19,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    const groups = [
+    let groups = [
         {
             groupName: "Grup 1",
             students: [
@@ -103,26 +105,26 @@ document.addEventListener('DOMContentLoaded', function() {
         {
             groupName: "Grup 11",
             students: [
-                { name: "Estudiante11A" },
-                { name: "Estudiante11B" },
-                { name: "Estudiante11C" }
+                { name: "Taula buida" },
+                { name: "Taula buida" },
+                { name: "Taula buida" }
             ]
         },
         {
             groupName: "Grup 12",
             students: [
-                { name: "Estudiante12A" },
-                { name: "Estudiante12B" },
-                { name: "Estudiante12C" }
+                { name: "Taula buida" },
+                { name: "Taula buida" },
+                { name: "Taula buida" }
             ]
         }
     ];
     
 
 
-    const clearPreviousHighlight = () => {
-        const secondaryTableRows = secondaryTableEl.getElementsByTagName('tr');
-        const mainTableRows = mainTableEl.getElementsByTagName('tr');
+    let clearPreviousHighlight = () => {
+        let secondaryTableRows = secondaryTableEl.getElementsByTagName('tr');
+        let mainTableRows = mainTableEl.getElementsByTagName('tr');
 
         for (let row of secondaryTableRows) {
             row.classList.remove('highlighted-row');
@@ -133,11 +135,11 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    const highlightTableRow = (groupName) => {
+    let highlightTableRow = (groupName) => {
         clearPreviousHighlight();
 
-        const findAndHighlight = (table) => {
-            const rows = table.getElementsByTagName('tr');
+        let findAndHighlight = (table) => {
+            let rows = table.getElementsByTagName('tr');
             for (let row of rows) {
                 if (row.getAttribute('data-group') === groupName) {
                     row.classList.add('highlighted-row');
@@ -150,14 +152,14 @@ document.addEventListener('DOMContentLoaded', function() {
         findAndHighlight(mainTableEl);
     }
 
-    const displayGrupDetails = (groupName) => {
-        const group = groups.find(g => g.groupName === groupName);
+    let displayGrupDetails = (groupName) => {
+        let group = groups.find(g => g.groupName === groupName);
         studentListEl.innerHTML = ''; // Limpiar el listado previo
         groupNameTitle.textContent = `Información del ${groupName}`;
 
         if (group) {
             group.students.forEach(student => {
-                const li = document.createElement('li');
+                let li = document.createElement('li');
                 li.textContent = student.name;
                 studentListEl.appendChild(li);
             });
@@ -166,14 +168,14 @@ document.addEventListener('DOMContentLoaded', function() {
         highlightTableRow(groupName);
     };
 
-    const handleTableClick = (e) => {
+    let handleTableClick = (e) => {
         let targetRow = e.target;
         while (targetRow && targetRow.tagName !== 'TR') {
             targetRow = targetRow.parentElement;
         }
 
         if (targetRow && targetRow.hasAttribute('data-group')) {
-            const groupName = targetRow.getAttribute('data-group');
+            let groupName = targetRow.getAttribute('data-group');
             displayGrupDetails(groupName);
         }
     };

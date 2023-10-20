@@ -7,7 +7,12 @@ table {
     margin: 3px;
     background-color: rgb(88, 87, 87);
 }
-
+body{
+    background-image: url(fons.png);
+    background-position: center top;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
 th {
     border: 2px solid;
     border-radius: 5px;
@@ -30,9 +35,77 @@ tr:active th{
 }
 
 #selectedGrupInfo {
-    margin-left: 20px; /* Añade un margen a la izquierda para separarlo de las tablas */
-    padding: 10px; /* Añade un relleno interno para que el contenido no esté pegado a los bordes */
-    border: 1px solid #ccc; /* Opcional: añade un borde alrededor del contenedor para definirlo mejor */
-    background-color: #f5f5f5; /* Opcional: añade un color de fondo para diferenciar el contenedor */
-    float: left; /* Asegura que el contenedor flote a la izquierda, junto a las tablas */
+    margin-top: 25px;
+    margin-left: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #f5f5f5;
+    clear: left;
+    width: 150px;
+    float: left;
 }
+
+#GrupsBotons {
+    float: left;
+    width: 400px;
+    text-align: center;
+    margin-top: 15px;
+    margin-left: 20px;
+}
+
+.miBoton {
+    border: none; 
+    color: white; 
+    padding: 14px 28px;
+    margin: 5px; 
+    cursor: pointer; 
+    border-radius: 5px; 
+    background-color: #e7e7e7; color: black;
+    max-width: 90px;
+  }
+
+
+.miBoton:hover {
+    background: #A56FFB;
+    color: white;
+}
+
+img {
+    width: 300px;
+    margin-bottom: 30px;
+}
+
+ul.breadcrumb {
+    padding: 10px 16px;
+    list-style: none;
+    background: linear-gradient(to right, #eee, #A56FFB);
+    border-radius: 7px;
+  }
+
+  ul.breadcrumb li {
+    display: inline;
+    font-size: 18px;
+  }
+
+  ul.breadcrumb li+li:before {
+    padding: 8px;
+    color: black;
+    content: "/\00a0";
+  }
+
+  ul.breadcrumb li a {
+    color: #0275d8;
+    text-decoration: none;
+  }
+
+  ul.breadcrumb li a:hover {
+    color: #01447e;
+    text-decoration: underline;
+  }
+
+  footer{
+    position: absolute;
+    bottom: 0;
+    width: 99%;
+    text-align: center;
+  }

@@ -1,33 +1,67 @@
 @import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Pixelify+Sans:wght@500&display=swap');
+body {
+    background-image: url('3398604.jpg');
+    background-size: 100%;
+  }
+
+img {
+    width: 250px;
+    position: relative;
+}
+
 *{
     text-align: center;
-
-
-    
 }
-body{
-    background-image: url(fons.png);
-    background-position: center top;
-    background-size: 100%;
-    background-repeat: no-repeat;
-}
+
 h1{
     font-family: 'Lilita One', sans-serif;
     font-size: 60px;
+    color: white;
 }
-button{
-    font-family: 'Lilita One', sans-serif;
 
-    width: 200px;
-    height: 200px;
-    font-size: xx-large;
-    color: #A56FFB;
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 99%;
+    text-align: center;
+    color: white;
 }
-button:hover{
-        transform:  scale(1.3);
-        color: aliceblue;
-        background-color: #A56FFB;
-		border-radius: 0;
-        transition-duration: 0.2s;        transition-timing-function: linear;
 
-}
+.svg-wrapper {
+    margin-top: 0;
+    position: relative;
+    width: 150px;
+    height: 40px;
+    display: inline-block;
+    border-radius: 3px;
+    margin-top: 100px;
+  }
+
+  #shape {
+    stroke-width: 6px;
+    fill: transparent;
+    stroke: #009FFD;
+    stroke-dasharray: 85 400;
+    stroke-dashoffset: -220;
+    transition: 1s all ease;
+  }
+
+  #text {
+    margin-top: -35px;
+    text-align: center;
+    font-size: x-large;
+  }
+  
+  #text a {
+    color: white;
+    text-decoration: none;
+    font-weight: 100;
+    font-size: 1.1em;
+  }
+
+  .svg-wrapper:hover #shape {
+    stroke-dasharray: 50 0;
+    stroke-width: 3px;
+    stroke-dashoffset: 0;
+    stroke: #06D6A0;
+  }

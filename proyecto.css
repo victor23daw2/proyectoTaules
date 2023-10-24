@@ -8,7 +8,7 @@ table {
     background-color: rgb(88, 87, 87);
 }
 body{
-    background-image: url(fondo-plano-poligonal_23-2148916170.jpg);
+    background-image: url(bg-page.jpg-data.jpg);
     background-position: center center;
     background-size: 100%;
     background-repeat: repeat-y;
@@ -17,22 +17,22 @@ body{
 th {
     border: 2px solid;
     border-radius: 5px;
-    background-color: antiquewhite;
+    background-color: #E0D5F1;
 }
 
 tr th:hover {
-    background-color: rgb(237, 185, 117);
+    background-color: #E0D5F1;
 }
 
 tr:hover th {
-    background-color: rgb(237, 185, 117);
+    background-color: #A773FB;
 }
 
 tr:active th{
-    background-color: rgb(237, 185, 117)
+    background-color: #A773FB;
 }
 .highlighted-row th {
-    background-color: rgb(237, 185, 117);
+    background-color: #A773FB;
 }
 
 #selectedGrupInfo {
@@ -105,7 +105,7 @@ ul.breadcrumb {
   }
 
   footer{
-    position: absolute;
+    position: fixed;
     bottom: 0;
     width: 99%;
     text-align: center;

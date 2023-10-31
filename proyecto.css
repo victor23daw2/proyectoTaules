@@ -1,3 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Pixelify+Sans:wght@500&display=swap');
+.bodyB {
+    background-image: url('3398604.jpg');
+    background-size: 100%;
+  }
+
+.imgB {
+    width: 250px;
+    position: relative;
+}
+
+*{
+    text-align: center;
+}
+
+.h1B{
+    font-family: 'Lilita One', sans-serif;
+    font-size: 60px;
+    color: white;
+}
+
+.footerB {
+    position: absolute;
+    bottom: 0;
+    width: 99%;
+    text-align: center;
+    color: white;
+}
+
+.svg-wrapper {
+    margin-top: 0;
+    position: relative;
+    width: 150px;
+    height: 40px;
+    display: inline-block;
+    border-radius: 3px;
+    margin-top: 100px;
+  }
+
+  #shape {
+    stroke-width: 6px;
+    fill: transparent;
+    stroke: #009FFD;
+    stroke-dasharray: 85 400;
+    stroke-dashoffset: -220;
+    transition: 1s all ease;
+  }
+
+  #text {
+    margin-top: -35px;
+    text-align: center;
+    font-size: x-large;
+  }
+  
+  #text a {
+    color: white;
+    text-decoration: none;
+    font-weight: 100;
+    font-size: 1.1em;
+  }
+
+  .svg-wrapper:hover #shape {
+    stroke-dasharray: 50 0;
+    stroke-width: 3px;
+    stroke-dashoffset: 0;
+    stroke: #06D6A0;
+  }
+
+
+
+
+
+
 table {
     border: 2px solid;
     width: 200px;
@@ -7,7 +80,7 @@ table {
     margin: 3px;
     background-color: rgb(88, 87, 87);
 }
-body{
+.body{
     background-image: url(bg-page.jpg-data.jpg);
     background-position: center center;
     background-size: 100%;

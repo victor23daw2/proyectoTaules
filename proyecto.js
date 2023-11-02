@@ -12,7 +12,6 @@ document.addEventListener('DOMContentLoaded', function() {
             boton.className = "miBoton";
     
 
-            // Establecer el comportamiento al hacer clic en el botón
             boton.onclick = function() {
                 displayGrupDetails(groups[i].groupName);
             };
@@ -183,6 +182,5 @@ document.addEventListener('DOMContentLoaded', function() {
     secondaryTableEl.addEventListener('click', handleTableClick);
     mainTableEl.addEventListener('click', handleTableClick);
 
-    // Finalmente, generamos los botones.
     generarBotones();
 });

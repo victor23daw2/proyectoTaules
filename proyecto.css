@@ -11,6 +11,17 @@
 
 *{
     text-align: center;
+    list-style: none;
+}
+
+li {
+  text-align: justify;
+}
+
+.contenido {
+  display: flex;
+  align-content: center;
+  justify-content: center;
 }
 
 .h1B{

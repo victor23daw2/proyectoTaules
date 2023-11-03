@@ -144,7 +144,9 @@ tr:active th{
     max-width: 90px;
   }
 
-
+  .button-highlighted-red {
+    background-color: red; 
+  }
 .miBoton:hover {
     background: #A56FFB;
     color: white;
@@ -182,6 +184,11 @@ ul.breadcrumb {
     color: #01447e;
     text-decoration: underline;
   }
+  .button-highlighted {
+    background-color: #A56FFB; 
+    color: white;
+}
+
 
   footer{
     position: fixed;
